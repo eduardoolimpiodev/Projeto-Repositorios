@@ -15,8 +15,20 @@ export default function Main() {
         async function submit(){
             setLoading(true);
             try{
+                //Fazer a verificação se está em branco para não criar uma requisição.
+                if(newRepo === '') {
+                    throw new Error('Você precisa indicar um repositório.')
+                }
+                
                 const response = await api.get(`repos/${newRepo}`);
-    
+                
+                //Faz a validação se o repositório já está incluso na lista.
+                const hasRepo = repositorios.find(repo => repo.name === newRepo);
+
+                if(hasRepo) {
+                    throw new Error('Repositório duplicado.');
+                }
+
                 const data = {
                     name: response.data.full_name,
                 }
