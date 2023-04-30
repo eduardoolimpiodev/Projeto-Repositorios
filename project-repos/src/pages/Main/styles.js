@@ -18,6 +18,14 @@ export const Container = styled.div`
         margin-right: 10px;
     }
 
+    p {
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        
+    }
 
  }
 
@@ -111,4 +119,14 @@ export const DeleteButton = styled.button.attrs({
     padding: 8px 7px;
     outline:0; 
     border-radius: 4px;
+`;
+
+export const Eduardo = styled.h4`
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    flex-direction: row;
+    
 `;

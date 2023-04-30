@@ -133,6 +133,9 @@ export const PageActions = styled.div`
 
 export const FilterList = styled.div`
     margin: 15px 0;
+    align-items: center;
+    justify-content: center;
+    display: flex;
     
     button {
         outline: 0;

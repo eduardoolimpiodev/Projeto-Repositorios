@@ -1,5 +1,5 @@
 import { React, useState, useCallback, useEffect } from "react";
-import { Container, Form, SubmitButton, List, DeleteButton  } from './styles';
+import { Container, Form, SubmitButton, List, DeleteButton, Eduardo  } from './styles';
 import { FaGithub, FaPlus, FaSpinner, FaBars, FaTrash } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import api from '../../services/api';
@@ -59,12 +59,10 @@ export default function Main() {
             } finally {
                 setLoading(false);
             }
-
-            
+   
         }
         
         submit();
-
 
     }, [newRepo, repositorios]);
      
@@ -72,7 +70,6 @@ export default function Main() {
     function handleInputChange(e) {
         setNewRepo(e.target.value);
         setAlert(null);
-
     }
 
     const handleDelete = useCallback((repo) => {
@@ -81,16 +78,17 @@ export default function Main() {
     }, [repositorios]);
 
     return (
+        <>   
         <Container>
             <h1>
                 <FaGithub size={25} />
-                Meus Repositórios
+                My Repositories
             </h1>
 
             <Form onSubmit={handleSubmit} error={alert}>
                 <input 
                 type="text" 
-                placeholder="Adicionar Repositórios" 
+                placeholder="Add Repositorie" 
                 value={newRepo}
                 onChange={handleInputChange}
                 />
@@ -118,8 +116,14 @@ export default function Main() {
                         </Link>
                     </li>
                 ))}
-            </List>            
-
+            </List>  
+            
+            <Eduardo>
+                <h5>www.eduardoolimpio.com</h5>
+            </Eduardo>    
+                     
         </Container>
+        
+        </>
     )
 }
