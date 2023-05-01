@@ -40,7 +40,7 @@ export default function Repositorio({match}) {
         }
         load();
 
-    }, [match.params.repositorio]);
+    }, [filters, match.params.repositorio]);
 
     useEffect(() => {
         async function loadIssue() {
