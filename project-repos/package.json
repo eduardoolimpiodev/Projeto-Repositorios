@@ -1,7 +1,7 @@
 {
   "name": "project-repos",
   "version": "0.1.0",
-  "homepage": "https://eduardoolimpiodev.github.io/Projeto-Repositorios",
+  "homepage": "project-repos/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
